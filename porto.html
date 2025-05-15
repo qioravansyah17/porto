@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Qioravansyah - Educational Technology Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #a855f7;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #4f46e5, #a855f7);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #a855f7;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 0.5rem;
+            top: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #4f46e5;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="text-xl font-bold text-purple-600">Qioravansyah</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-purple-600">Projects</a>
+                    <a href="#interventions" class="nav-link text-gray-700 hover:text-purple-600">Interventions</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Muhammad Qioravansyah Drysa Tuela</h1>
+                    <p class="text-xl md:text-2xl mb-6">Educational Technology Student at Universitas Negeri Jakarta</p>
+                    <p class="text-lg mb-8">Passionate about creating innovative learning experiences through technology and design.</p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Projects</a>
+                        <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition duration-300">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                        <img src="profile_picture.jpg" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-600">Academic Background</h3>
+                    <div class="space-y-6">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                                <h4 class="font-bold text-lg">Universitas Negeri Jakarta</h4>
+                                <p class="text-gray-600">Bachelor of Educational Technology</p>
+                                <p class="text-gray-500">2020 - Present (Expected Graduation: 2024)</p>
+                                <p class="mt-2">Current GPA: 3.88/4.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mt-8 mb-4 text-purple-600">Skills & Competencies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Instructional Design</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">E-Learning Development</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Interactive Media</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Training Program Design</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Performance Analysis</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Communication</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Team Collaboration</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-600">Professional Profile</h3>
+                    <p class="mb-4">A third-year Educational Technology student with a strong academic record and active involvement in student organizations, social initiatives, and competitions relevant to my field of study.</p>
+                    <p class="mb-4">Passionate about interpersonal communication and experienced in developing both educational and creative content. Successfully completed various academic and media-based projects.</p>
+                    <p class="mb-6">Known for being adaptive, communicative, and collaborative in team settings with a strong ability to analyze learning needs and design effective educational interventions.</p>
+                    
+                    <h3 class="text-2xl font-semibold mt-8 mb-4 text-purple-600">Key Strengths</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <p>Innovative approach to learning design and technology integration</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <p>Strong analytical skills for performance improvement</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <p>Effective communication and presentation abilities</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <p>Creative problem-solving in educational contexts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Interactive Learning Products</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-book-open text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Interactive Digital Module</h3>
+                        <p class="text-gray-600 mb-4">Final project for "Learning Materials Development" course. Created an interactive module about communication skills using Kotobee software.</p>
+                        <a href="https://drive.google.com/file/d/1d5HY3qGDlSV-nQ1Bkj6YAhjEgw35PjP8/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-hands-helping text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Interactive Guide Book</h3>
+                        <p class="text-gray-600 mb-4">Final project for "Performance Learning" course. Created a digital guidebook for volunteers assisting hearing-impaired students at UNJ.</p>
+                        <a href="https://drive.google.com/file/d/1av5FYANJIhyLCs_eM4SPbExTIgt_08Uo/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-headphones text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Interactive Audiobook</h3>
+                        <p class="text-gray-600 mb-4">Project for "Performance Learning" course. Converted traditional "Computer Systems" textbook into interactive audiobook using FlipHTML.</p>
+                        <a href="https://drive.google.com/file/d/11phShGdYRpci9JCvgZs-tXm6g4F4gURo/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-gamepad text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Gamified Learning Media</h3>
+                        <p class="text-gray-600 mb-4">Final project for "Computer-Based Learning" course. Created digital learning product with game elements using Articulate Storyline.</p>
+                        <a href="https://drive.google.com/file/d/1NZgNLXD17AGmWHyS0K-UwbbEmXld_yZP/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-globe text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Learning Resources Website</h3>
+                        <p class="text-gray-600 mb-4">Final project for "Learning Resources Center Management" course. Created "One Learning Resources Center" website.</p>
+                        <a href="https://drive.google.com/file/d/1Z4KSUgNwB0xYmPLG-p7lepTUmZrcPF97/view?usp=drive_link" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interventions Section -->
+    <section id="interventions" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Interventions & Training</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Intervention -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Performance Intervention</h3>
+                        <p class="text-gray-600 mb-4">Final project for "Performance Technology" course. Analyzed and intervened using Fishbone Root Cause Analysis for "Noona Bakery" MSME.</p>
+                        <a href="https://drive.google.com/file/d/1ghG8wX_48M5symZTvcjV4Iwvg2AbLD28/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Training -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-chalkboard-teacher text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Micro Training Program</h3>
+                        <p class="text-gray-600 mb-4">Final project for "Training Program Development" course. Created "Formal Communication Training for BEM FIP UNJ Members" focusing on "Negotiation Skills for Collaboration".</p>
+                        <a href="https://drive.google.com/file/d/1oumpfgFMJmtL4GHE6Y2OKBgKfbQ0Ua44/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">Get In Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-4 text-purple-200"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-purple-100">qioravansyah@student.unj.ac.id</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-purple-200"></i>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-purple-100">Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-university mt-1 mr-4 text-purple-200"></i>
+                            <div>
+                                <h4 class="font-medium">University</h4>
+                                <p class="text-purple-100">Universitas Negeri Jakarta</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mt-8 mb-4">Connect With Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-700 flex items-center justify-center hover:bg-purple-800 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-700 flex items-center justify-center hover:bg-purple-800 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-700 flex items-center justify-center hover:bg-purple-800 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-700 flex items-center justify-center hover:bg-purple-800 transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1 font-medium">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-purple-700 border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white placeholder-purple-300" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-purple-700 border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white placeholder-purple-300" placeholder="Your email">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1 font-medium">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-purple-700 border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400 text-white placeholder-purple-300" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 Muhammad Qioravansyah Drysa Tuela. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#home" class="hover:text-white transition duration-300">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const navLinks = document.querySelector('.md\\:hidden + .md\\:flex');
+            if (navLinks) {
+                navLinks.classList.toggle('hidden');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.querySelector('.md\\:hidden + .md\\:flex');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Add animation to project cards when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
