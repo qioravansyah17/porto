@@ -207,7 +207,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Interactive Digital Module</h3>
-                        <p class="text-gray-600 mb-4">Final project for "Learning Materials Development" course. Created an interactive module about communication skills using Kotobee software.</p>
+                        <p class="text-gray-600 mb-4">Final project for "Pengembangan Bahan Belajar" course. Created an interactive module about communication skills using Kotobee software.</p>
                         <a href="https://drive.google.com/file/d/1d5HY3qGDlSV-nQ1Bkj6YAhjEgw35PjP8/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
@@ -221,7 +221,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Interactive Guide Book</h3>
-                        <p class="text-gray-600 mb-4">Final project for "Performance Learning" course. Created a digital guidebook for volunteers assisting hearing-impaired students at UNJ.</p>
+                        <p class="text-gray-600 mb-4">Final project for "Belajar Kinerja" course. Created a digital guidebook for volunteers assisting hearing-impaired students at UNJ.</p>
                         <a href="https://drive.google.com/file/d/1av5FYANJIhyLCs_eM4SPbExTIgt_08Uo/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
@@ -235,7 +235,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Interactive Audiobook</h3>
-                        <p class="text-gray-600 mb-4">Project for "Performance Learning" course. Converted traditional "Computer Systems" textbook into interactive audiobook using FlipHTML.</p>
+                        <p class="text-gray-600 mb-4">Project for "Belajar Kinerja" course. Converted traditional "Computer Systems" textbook into interactive audiobook using FlipHTML.</p>
                         <a href="https://drive.google.com/file/d/11phShGdYRpci9JCvgZs-tXm6g4F4gURo/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
@@ -249,7 +249,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Gamified Learning Media</h3>
-                        <p class="text-gray-600 mb-4">Final project for "Computer-Based Learning" course. Created digital learning product with game elements using Articulate Storyline.</p>
+                        <p class="text-gray-600 mb-4">Final project for "Belajar Berbasis Komputer" course. Created digital learning product with game elements using Articulate Storyline.</p>
                         <a href="https://drive.google.com/file/d/1NZgNLXD17AGmWHyS0K-UwbbEmXld_yZP/view?usp=sharing" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
@@ -263,7 +263,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Learning Resources Website</h3>
-                        <p class="text-gray-600 mb-4">Final project for "Learning Resources Center Management" course. Created "One Learning Resources Center" website.</p>
+                        <p class="text-gray-600 mb-4">Final project for "Pengelolaan Pusat Sumber Belajar" course. Created "One Learning Resources Center" website.</p>
                         <a href="https://drive.google.com/file/d/1Z4KSUgNwB0xYmPLG-p7lepTUmZrcPF97/view?usp=drive_link" target="_blank" class="text-purple-600 font-medium hover:text-purple-800 transition duration-300 inline-flex items-center">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
@@ -430,6 +430,20 @@
 
         // Add animation to project cards when they come into view
         const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+erver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-fade-in');
